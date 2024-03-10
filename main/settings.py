@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-$j-^thu0+m)o8ed7zqqq%^02i61jd57^^ox57(z=ekyg9cov%k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'userauth',
     
 ]
 
