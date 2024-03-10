@@ -19,4 +19,4 @@ COPY . /app/
 RUN python manage.py collectstatic --noinput
 
 # Run the application
-CMD gunicorn core.wsgi:application --bind 0.0.0.0:8086
+CMD gunicorn main.wsgi:application --bind 0.0.0.0:8086
