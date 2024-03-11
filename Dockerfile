@@ -6,14 +6,14 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set work directory
-WORKDIR /app
+WORKDIR /fintrac
 
 # Install dependencies
-COPY requirements.txt /app/
+COPY requirements.txt /fintrac/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy project
-COPY . /app/
+COPY . /fintrac/
 
 # Collect static files
 RUN python manage.py collectstatic --noinput
