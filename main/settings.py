@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'core',
-    'userauth',
+    'userauths',
+    'account',
     
 ]
 
@@ -56,6 +58,27 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+
+CORS_ORIGIN_WHITELIST = (
+    'https://fintrac.aliahad.com',
+    'https://aliahad.com',
+    'http://0.0.0.0:8086',
+    'http://127.0.0.1:8086',
+    'http://localhost:8086',
+)
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://fintrac.aliahad.com',
+    'https://aliahad.com',
+    'http://0.0.0.0:8086',
+    'http://127.0.0.1:8086',
+    'http://localhost:8086',
+]
+
+
+
 
 ROOT_URLCONF = 'main.urls'
 
@@ -166,4 +189,4 @@ JAZZMIN_SETTINGS = {
     
 }
 
-AUTH_USER_MODEL = 'userauth.User'
+AUTH_USER_MODEL = 'userauths.User'
